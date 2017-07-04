@@ -108,28 +108,28 @@
 
 				// Get avatar icons
 				if ($icons == 'yes') {
-					$avatar = get_user_avatar((!empty($read_cmt->email)) ? md5(strtolower(trim(encrypt($read_cmt->email)))) : '');
+					$avatar = get_user_avatar((!empty($read_cmt->email)) ? md5(strtolower(trim($read_cmt->email))) : '');
 					$avatar_icon = '<img width="' . $icon_size . '" height="' . $icon_size . '" src="' . $avatar . '" alt="#' . $permatext . '" style="vertical-align: top;">';
 				} else {
 					$avatar_icon = '<a href="#' . $permalink . '" title="Permalink">#' . $permatext . '</a>';
 				}
 
 				// Setup "Like" link
-				if (!empty($_COOKIE[$like_cookie])) {
-					if ($_COOKIE[$like_cookie] == 'liked') {
-						$like_onclick = 'like(\'' . $permalink . '\', \'' . basename($file, '.xml') . '\'); ';
-						$like_title = $text['liked_cmt'];
-						$like_class = 'liked';
-					} else {
-						$like_onclick = 'like(\'' . $permalink . '\', \'' . basename($file, '.xml') . '\'); ';
-						$like_title = $text['like_cmt'];
-						$like_class = 'like';
-					}
-				} else {
-					$like_onclick = 'like(\'' . $permalink . '\', \'' . basename($file, '.xml') . '\'); ';
-					$like_title = $text['like_cmt'];
-					$like_class = 'like';
-				}
+				// if (!empty($_COOKIE[$like_cookie])) {
+				// 	if ($_COOKIE[$like_cookie] == 'liked') {
+				// 		$like_onclick = 'like(\'' . $permalink . '\', \'' . basename($file, '.xml') . '\'); ';
+				// 		$like_title = $text['liked_cmt'];
+				// 		$like_class = 'liked';
+				// 	} else {
+				// 		$like_onclick = 'like(\'' . $permalink . '\', \'' . basename($file, '.xml') . '\'); ';
+				// 		$like_title = $text['like_cmt'];
+				// 		$like_class = 'like';
+				// 	}
+				// } else {
+				// 	$like_onclick = 'like(\'' . $permalink . '\', \'' . basename($file, '.xml') . '\'); ';
+				// 	$like_title = $text['like_cmt'];
+				// 	$like_class = 'like';
+				// }
 
 				// Define "Reply" link with appropriate tooltip
 				if (!empty($read_cmt->email) and $read_cmt['notifications'] == 'yes') {
@@ -179,7 +179,8 @@
 					// Define "Like" link for everyone except original poster
 					if ($user_login == false) {
 						if (empty($_COOKIE['email']) or encrypt($_COOKIE['email']) != $read_cmt->email) {
-							$variable["$array_count"]['like_link'] = '<a href="#" id="like-' . $permalink . '" onClick="' . $like_onclick . 'return false;" title="' . $like_title . '" class="' . $like_class . '">Like</a>';
+						//	$variable["$array_count"]['like_link'] = '<a href="#" id="like-' . $permalink . '" onClick="' . $like_onclick . 'return false;" title="' . $like_title . '" class="' . $like_class . '">Like</a>';
+								$variable["$array_count"]['like_link'] = '';
 						}
 					}
 
@@ -209,7 +210,8 @@
 					// Define "Like" link for everyone except original poster
 					if ($user_login == false) {
 						if (empty($_COOKIE['email']) or encrypt($_COOKIE['email']) != $read_cmt->email) {
-							$variable .= "\t\t" . 'like_link: \'' . addcslashes('<a href="#" id="like-' . $permalink . '" onClick="' . $like_onclick . 'return false;" title="' . $like_title . '" class="' . $like_class . '">Like</a>', "'") . '\',' . PHP_EOL;
+							// $variable .= "\t\t" . 'like_link: \'' . addcslashes('<a href="#" id="like-' . $permalink . '" onClick="' . $like_onclick . 'return false;" title="' . $like_title . '" class="' . $like_class . '">Like</a>', "'") . '\',' . PHP_EOL;
+							$variable .= "\t\t" . 'like_link: \'' . addcslashes('', "'") . '\',' . PHP_EOL;
 						}
 					}
 

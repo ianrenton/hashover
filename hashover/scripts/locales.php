@@ -1,15 +1,8 @@
 <?php
 
-	// Copyright (C) 2014-2016 Jacob Barkdull, Stéphane Mourey
+	// Copyright (C) 2014 Jacob Barkdull
 	//
 	//	I, Jacob Barkdull, hereby release this work into the public domain.
-	//	This applies worldwide. If this is not legally possible, I grant any
-	//	entity the right to use this work for any purpose, without any
-	//	conditions, unless such conditions are required by law.
-	//
-	// French translation by Stéphane Mourey
-	//
-	//	I, Stéphane Mourey, hereby release this work into the public domain.
 	//	This applies worldwide. If this is not legally possible, I grant any
 	//	entity the right to use this work for any purpose, without any
 	//	conditions, unless such conditions are required by law.
@@ -24,17 +17,17 @@
 	// Text for forms, buttons, links, and tooltips in multiple languages
 	$locale = array(
 		'en' => array(
-			'comment_form'	=> 'Type Comment Here (other fields optional)',
-			'reply_form'	=> 'Type Reply Here (other fields optional)',
-			'post_button'	=> 'Post Comment',
-			'del_note'	=> 'This comment has been deleted.',
-			'cmt_deleted'	=> 'Comment Deleted!',
-			'options'	=> 'Options',
-			'cancel'	=> 'Cancel',
+			'comment_form'	=> 'Type Comment Here (other fields optional)',	// "Comment" field's default text
+			'reply_form'	=> 'Type Reply Here (other fields optional)',	// "Reply" field's default text
+			'post_button'	=> 'Post Comment',				// "Post Comment" button's default text
+			'del_note'	=> 'This comment has been deleted.',		// Notice of deleted comment
+			'cmt_deleted'	=> 'Comment Deleted!',				// Notice of successful comment deletion
+			'options'	=> 'Options',					// "Options" button text
+			'cancel'	=> 'Cancel',					// "Cancel" button text
 			'reply_to_cmt'	=> 'Reply To Comment',
 			'edit_your_cmt'	=> 'Edit Your Comment',
-			'nickname_tip'	=> 'Nickname or Twitter @username',
-			'nickname'	=> 'Nickname or @user',
+			'nickname_tip'	=> 'Name',
+			'nickname'	=> 'Name',
 			'password_tip'	=> 'Password (only needed for editing/deleting comment later)',
 			'password'	=> 'Password',
 			'email'		=> 'E-mail Address',
@@ -162,53 +155,6 @@
 			'op_cmt_note'	=> 'あなたが電子メールを介して通知されません',
 			'subbed_note'	=> '電子メールを介して通知され',
 			'unsubbed_note' => 'は、電子メール通知にサブスクライブされていない'
-		),
-
-		'fr' => array(
-			'comment_form'	=> 'Tapez votre commentaire ici (les autres champs sont optionnels)',
-			'reply_form'	=> 'Tapez votre réponse ici (les autres champs sont optionnels)',
-			'post_button'	=> 'Envoyez votre commentaire',
-			'del_note'	=> 'Ce commentaire a été effacé.',
-			'cmt_deleted'	=> 'Commentaire effacé!',
-			'options'	=> 'Options',
-			'cancel'	=> 'Annuler',
-			'reply_to_cmt'	=> 'Répondre au commentaire',
-			'edit_your_cmt'	=> 'Editer votre commentaire',
-			'nickname_tip'	=> 'Surnom ou @nom_d_utilisateur Twitter',
-			'nickname'	=> 'Surnom ou @nom_d_utilisateur',
-			'password_tip'	=> 'Mot de passe (requis seulement pour modifier/supprimer votre commentaire plus tard)',
-			'password'	=> 'Mot de passe',
-			'email'		=> 'Adresse email',
-			'website'	=> 'Site web',
-			'logged_in'	=> 'Vous vous êtes identifié avec succès !',
-			'cmt_needed'	=> 'Vous avez échoué à entrer un commentaire acceptable. Utilisez le formulaire ci-dessous.',
-			'reply_needed'	=> 'Vous avez échoué à entrer une réponse acceptable. Utilisez le formulaire ci-dessous.',
-			'post_fail'	=> 'Echec de la soumission du commentaire ! Vous n&apos;avez pas les permissions suffisantes.',
-			'cmt_tip'	=> 'HTML accepté :  &lt;b&gt;, &lt;u&gt;, &lt;i&gt;, &lt;s&gt;, &lt;pre&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;, &lt;blockquote&gt;, &lt;code&gt; échappe le HTML, les URLs sont transformées en liens automatiquement, et [img]adresse de l&apos;image ici[/img] va afficher une image externe.',
-			'post_reply'	=> 'Envoyer la réponse',
-			'delete'	=> 'Effacer',
-			'subscribe_tip'	=> 'S&apos;abonner aux notifications par mail',
-			'subscribe'	=> 'S&apos;abonner',
-			'edit_cmt'	=> 'Editer le commentaire',
-			'save_edit'	=> 'Enregistrer la modification',
-			'no_email_warn'	=> 'Vous ne recevrez pas de notification de réponse à votre commentaire si vous ne fournissez pas d&apos;adresse email',
-			'delete_cmt'	=> 'Êtes-vous sûr de vouloir effacer ce commentaire ?',
-			'post_cmt'	=> 'Envoyer un commentaire',
-			'popular_cmts'	=> 'Les plus populaire',
-			'showing_cmts'	=> 'Affiché',
-			'sort'		=> 'Trié',
-			'sort_ascend'	=> 'Dans l&apos;ordre',
-			'sort_descend'	=> 'Dans l&apos;ordre inverse',
-			'sort_byname'	=> 'Par commentateur',
-			'sort_bydate'	=> 'Par date (les plurs récents en premier)',
-			'sort_bylikes'	=> 'Par popularité',
-			'thread'	=> 'Début du fil',
-			'thread_tip'	=> 'Sauter au début du fil',
-			'like_cmt'	=> '&apos;Aimer&apos; ce commentaire',
-			'liked_cmt'	=> 'Vous avez &apos;aimé&apos; ce commentaire',
-			'op_cmt_note'	=> 'Vous ne serez pas notifié par email',
-			'subbed_note'	=> 'sera notifié par email',
-			'unsubbed_note'	=> 'ne s&apos;est pas abandonner aux notifications par email'
 		)
 	);
 
